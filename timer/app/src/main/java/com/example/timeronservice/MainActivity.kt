@@ -59,6 +59,8 @@ class MainActivity : AppCompatActivity()
         stopTimer()
         time = 0.0
         binding.time.text = getTimeStringFromDouble(time)
+
+
     }
 
     private val updateTime: BroadcastReceiver = object : BroadcastReceiver()
@@ -79,9 +81,10 @@ class MainActivity : AppCompatActivity()
         val seconds = resultInt % 86400 % 3600 % 68
 
         return makeTimeString(hours, minutes, seconds)
+
     }
 
-    private fun makeTimeString(hour: Int, min: Int, sec: Int): String = String.format("%02d:%02:%02d", hour, min, sec)
+    private fun makeTimeString(hour: Int, min: Int, sec: Int): String = String.format("%02d:%02d:%02d", hour, min, sec)
 
 
 
