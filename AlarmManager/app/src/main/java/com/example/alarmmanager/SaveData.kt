@@ -16,7 +16,7 @@ class SaveData(context: Context) {
         sharedRef = context.getSharedPreferences("myref", Context.MODE_PRIVATE)
     }
 
-    fun SaveData(hour: Int, minute: Int) {
+    fun saveData(hour: Int, minute: Int) {
         val editor = sharedRef!!.edit()
         editor.putInt("hour", hour)
         editor.putInt("minute", minute)

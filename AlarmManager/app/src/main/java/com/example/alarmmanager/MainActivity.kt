@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setTime(Hours: Int, Minute: Int) {
-        val tvShowTime.text = "$Hours : $Minute"
+        tvShowTime.text = "$Hours : $Minute"
     }
-        val saveData = SaveData(applicationContext
+        val saveData = SaveData(applicationContext)
         saveData.SaveData(Hours, Minute)
         saveData.setAlarm()
     }
