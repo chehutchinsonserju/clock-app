@@ -2,7 +2,7 @@
 Functional clock application designed for Android devices. Features will include a world clock, stopwatch, timer and alarm system.
 This project is being done for our course, SWEN3001.
 
-# Contributors:
+# GROUP 5 Contributors:
 
 Che Hutchinson Serju
 Rene Tim
