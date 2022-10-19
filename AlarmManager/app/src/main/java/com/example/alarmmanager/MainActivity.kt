@@ -3,8 +3,7 @@ package com.example.alarmmanager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
-import android.widget.Button
+import  kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val saveData = SaveData(applicationContext)
-        val tvShowTime.text = saveData.getHour().toString() + ":" + saveData.getMinute().toString()
+        "${saveData.getHour()}:${saveData.getMinute()}".also { tvShowTime.text = it }
     }
 
     fun buSetTime(view: View) {
