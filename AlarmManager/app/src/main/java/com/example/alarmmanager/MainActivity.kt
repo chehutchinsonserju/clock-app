@@ -3,6 +3,8 @@ package com.example.alarmmanager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import android.widget.Button
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,9 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     fun setTime(Hours: Int, Minute: Int) {
         tvShowTime.text = "$Hours : $Minute"
-    }
         val saveData = SaveData(applicationContext)
-        saveData.SaveData(Hours, Minute)
+        saveData.saveData(Hours, Minute)
         saveData.setAlarm()
     }
 }
+
