@@ -3,26 +3,87 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+<<<<<<< Updated upstream
     app:startDestination="@id/clockFragment">
+=======
+    app:startDestination="@id/stopwatchMain">
+>>>>>>> Stashed changes
 
     <fragment
         android:id="@+id/clockFragment"
         android:name="com.example.lastattempt.firstfrag"
         android:label="fragment_firstfrag"
+<<<<<<< Updated upstream
         tools:layout="@layout/fragment_firstfrag" />
     <fragment
         android:id="@+id/stopwatchFragment"
         android:name="com.example.lastattempt.secfrag"
         android:label="fragment_secfrag"
         tools:layout="@layout/fragment_secfrag" />
+=======
+        tools:layout="@layout/fragment_firstfrag" >
+        <action
+            android:id="@+id/action_clockFragment_to_stopwatch"
+            app:destination="@id/stopwatchMain" />
+        <action
+            android:id="@+id/action_clockFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_globalFragment"
+            app:destination="@id/globalFragment" />
+    </fragment>
+>>>>>>> Stashed changes
     <fragment
         android:id="@+id/timerFragment"
         android:name="com.example.lastattempt.thirdfrag"
         android:label="fragment_thirdfrag"
+<<<<<<< Updated upstream
         tools:layout="@layout/fragment_thirdfrag" />
+=======
+        tools:layout="@layout/fragment_thirdfrag" >
+        <action
+            android:id="@+id/action_timerFragment_to_stopwatchMain"
+            app:destination="@id/stopwatchMain" />
+        <action
+            android:id="@+id/action_timerFragment_to_globalFragment"
+            app:destination="@id/globalFragment" />
+        <action
+            android:id="@+id/action_timerFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+    </fragment>
+>>>>>>> Stashed changes
     <fragment
         android:id="@+id/globalFragment"
         android:name="com.example.lastattempt.fourthfragment"
         android:label="fragment_fourthfragment"
+<<<<<<< Updated upstream
         tools:layout="@layout/fragment_fourthfragment" />
+=======
+        tools:layout="@layout/fragment_fourthfragment" >
+        <action
+            android:id="@+id/action_globalFragment_to_stopwatchMain"
+            app:destination="@id/stopwatchMain" />
+        <action
+            android:id="@+id/action_globalFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_globalFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stopwatchMain"
+        android:name="com.example.lastattempt.fragments.StopwatchMain"
+        android:label="fragment_stopwatch"
+        tools:layout="@layout/fragment_stopwatch" >
+        <action
+            android:id="@+id/action_stopwatchMain_to_clockFragment"
+            app:destination="@id/clockFragment" />
+        <action
+            android:id="@+id/action_stopwatchMain_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_stopwatchMain_to_globalFragment"
+            app:destination="@id/globalFragment" />
+    </fragment>
+>>>>>>> Stashed changes
 </navigation>
