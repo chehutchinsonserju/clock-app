@@ -13,16 +13,4 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-<<<<<<< Updated upstream
-=======
-
-    <style name="Theme.LastAttempt.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.LastAttempt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.LastAttempt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
->>>>>>> Stashed changes
 </resources>

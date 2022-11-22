@@ -7,7 +7,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.lastattempt.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private  lateinit var navController: NavController
