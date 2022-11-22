@@ -1,41 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/clockFragment"
-        android:icon="@drawable/globe"
-<<<<<<< Updated upstream
-        android:title="Clock" />
+<item
+    android:id="@+id/clockFragment"
+    android:icon="@drawable/globe"
+    android:title="@string/clock" />
 
-    <item
-        android:id="@+id/stopwatchFragment"
-        android:icon="@drawable/stopwatch"
-        android:title="StopWatch" />
-=======
-        android:title="@string/clock" />
+<item
+    android:id="@+id/stopwatchMain"
+    android:icon="@drawable/stopwatch"
+    android:title="@string/stopwatch" />
 
-    <item
-        android:id="@+id/stopwatchMain"
-        android:icon="@drawable/stopwatch"
-        android:title="@string/stopwatch" />
->>>>>>> Stashed changes
+<item
+    android:id="@+id/timerFragment"
+    android:icon="@drawable/alarm"
+    android:title="@string/alarm" />
 
-    <item
-        android:id="@+id/timerFragment"
-        android:icon="@drawable/alarm"
-<<<<<<< Updated upstream
-        android:title="Alarm" />
-=======
-        android:title="@string/alarm" />
->>>>>>> Stashed changes
-
-    <item
-        android:id="@+id/globalFragment"
-        android:icon="@drawable/clock"
-<<<<<<< Updated upstream
-        android:title="Timer" />
-=======
-        android:title="@string/timer" />
->>>>>>> Stashed changes
+<item
+    android:id="@+id/globalFragment"
+    android:icon="@drawable/clock"
+    android:title="@string/timer" />
 </menu>

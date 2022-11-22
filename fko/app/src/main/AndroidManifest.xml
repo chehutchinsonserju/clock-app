@@ -13,18 +13,6 @@
         android:theme="@style/Theme.LastAttempt"
         tools:targetApi="31">
         <activity
-<<<<<<< Updated upstream
-=======
-            android:name=".FillerstopwatchActivity"
-            android:exported="false"
-            android:label="@string/title_activity_fillerstopwatch"
-            android:theme="@style/Theme.LastAttempt.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
->>>>>>> Stashed changes
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
