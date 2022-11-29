@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StopwatchActivity">
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time_at_zero"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@+id/timeTV">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStartStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            app:icon="@drawable/playicon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnReset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            app:icon="@drawable/reseticon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnStartStop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="413dp"
+        android:layout_height="176dp"
+        app:flow_horizontalBias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/clockbtn"
+            android:layout_width="132dp"
+            android:layout_height="60dp"
+            android:layout_margin="15sp"
+            android:layout_marginStart="4dp"
+            android:text="@string/clock"
+            android:textSize="24sp"
+            app:backgroundTint="#FF5722"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/stopwatchbtn"
+            android:layout_width="196dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/stopwatch"
+            android:textSize="24sp"
+            app:backgroundTint="#FF5722"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/clockbtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

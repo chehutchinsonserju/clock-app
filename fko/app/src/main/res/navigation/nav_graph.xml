@@ -3,65 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/clockFragment">
+    app:startDestination="@id/FirstFragment">
+
     <fragment
-        android:id="@+id/clockFragment"
-        android:name="com.example.lastattempt.firstfrag"
-        android:label="fragment_firstfrag"
-        tools:layout="@layout/fragment_firstfrag" >
-        <action
-            android:id="@+id/action_firstfrag_to_stopwatchMain2"
-            app:destination="@id/stopwatchMain" />
-        <action
-            android:id="@+id/action_firstfrag_to_fourthfragment"
-            app:destination="@id/globalFragment" />
-        <action
-            android:id="@+id/action_firstfrag_to_thirdfrag"
-            app:destination="@id/timerFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/stopwatchMain"
-        android:name="com.example.lastattempt.fragments.StopwatchMain"
-        android:label="fragment_stopwatch"
-        tools:layout="@layout/fragment_stopwatch" >
-        <action
-            android:id="@+id/action_stopwatchMain2_to_firstfrag"
-            app:destination="@id/clockFragment" />
-        <action
-            android:id="@+id/action_stopwatchMain2_to_thirdfrag"
-            app:destination="@id/timerFragment" />
-        <action
-            android:id="@+id/action_stopwatchMain2_to_fourthfragment"
-            app:destination="@id/globalFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/timerFragment"
-        android:name="com.example.lastattempt.thirdfrag"
-        android:label="fragment_thirdfrag"
-        tools:layout="@layout/fragment_thirdfrag" >
-        <action
-            android:id="@+id/action_thirdfrag_to_fourthfragment"
-            app:destination="@id/globalFragment" />
-        <action
-            android:id="@+id/action_thirdfrag_to_stopwatchMain2"
-            app:destination="@id/stopwatchMain" />
-        <action
-            android:id="@+id/action_thirdfrag_to_firstfrag"
-            app:destination="@id/clockFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/globalFragment"
-        android:name="com.example.lastattempt.fourthfragment"
-        android:label="fragment_fourthfragment"
-        tools:layout="@layout/fragment_fourthfragment" >
-        <action
-            android:id="@+id/action_fourthfragment_to_thirdfrag"
-            app:destination="@id/timerFragment" />
-        <action
-            android:id="@+id/action_fourthfragment_to_firstfrag"
-            app:destination="@id/clockFragment" />
-        <action
-            android:id="@+id/action_fourthfragment_to_stopwatchMain2"
-            app:destination="@id/stopwatchMain" />
-    </fragment>
+        android:id="@+id/FirstFragment"
+        android:name="com.example.lastattempt.Utilities.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first"/>
 </navigation>
