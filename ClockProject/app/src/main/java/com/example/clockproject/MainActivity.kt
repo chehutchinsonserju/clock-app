@@ -14,3 +14,4 @@ class MainActivity : AppCompatActivity() {
         var textdate = findViewById<TextClock>(R.id.textdateid)
     }
 }
+
