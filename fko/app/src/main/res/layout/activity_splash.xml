@@ -18,6 +18,7 @@
         android:shadowDy="5"
         android:shadowRadius="20"
         android:text="@string/get_started"
+        android:fontFamily="@font/osextrabold"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

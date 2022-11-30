@@ -18,12 +18,14 @@
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textAlignment="center"
-        android:layout_marginBottom="250sp"
+        android:layout_marginBottom="350sp"
+        android:fontFamily="@font/osbold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -34,6 +36,7 @@
             android:id="@+id/btnStartStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/ossemibold"
             android:text="@string/start"
             app:icon="@drawable/playicon"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,6 +49,7 @@
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/ossemibold"
             android:text="@string/reset"
             app:icon="@drawable/reseticon"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -56,6 +60,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:layout_width="400sp"
+        android:layout_height="400sp"
+        android:src="@drawable/stopwatchicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

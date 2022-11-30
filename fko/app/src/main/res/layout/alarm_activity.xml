@@ -14,9 +14,9 @@
         android:id="@+id/selectedTime"
         android:layout_marginTop="200dp"
         android:text="@string/sample_alarm_time"
+        android:fontFamily="@font/osbolditalic"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textStyle="bold|italic"
         android:textSize="46sp"/>
 
     <Button
@@ -26,6 +26,7 @@
         android:layout_marginHorizontal="26dp"
         android:layout_marginTop="36dp"
         android:text="@string/select_time"
+        android:fontFamily="@font/osbold"
         android:textSize="26sp" />
 
     <Button
@@ -35,6 +36,7 @@
         android:layout_marginHorizontal="26dp"
         android:layout_marginTop="36dp"
         android:text="@string/set_alarm"
+        android:fontFamily="@font/osbold"
         android:textSize="26sp" />
 
     <Button
@@ -44,5 +46,6 @@
         android:layout_marginHorizontal="26dp"
         android:layout_marginTop="36dp"
         android:text="@string/cancel_alarm"
+        android:fontFamily="@font/osbold"
         android:textSize="26sp" />
 </LinearLayout>

@@ -43,12 +43,8 @@ class HomeActivity : AppCompatActivity(){
             switchActivity("Timer")
         }
         val alarm = findViewById<FloatingActionButton>(R.id.alarmbtn)
-        alarm.setOnClickListener{
+        alarm.setOnClickListener {
             switchActivity("Alarm")
-        }
-        val global = findViewById<FloatingActionButton>(R.id.globalbtn)
-        global.setOnClickListener{
-            switchActivity("Global")
         }
     }
 
