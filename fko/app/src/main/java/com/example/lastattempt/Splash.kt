@@ -13,7 +13,7 @@ class Splash : AppCompatActivity() {
 
         val registerButton = findViewById<Button>(R.id.splash_homeButton);
         registerButton.setOnClickListener {
-            val intent = Intent(this, StopwatchActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }
