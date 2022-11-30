@@ -20,4 +20,18 @@
     <string name="alarmDescription">Magic button to move to alarm</string>
     <string name="gClockDescription">Magic button to move to global clock</string>
     <string name="get_started">Get Started</string>
+    <string name="date">Date</string>
+    <string name="select_country">Select Country</string>
+    <string name="country">Country</string>
+    <string name="word_display">Word Display</string>
+    <string name="select_continent">Select Continent</string>
+    <string name="_00_00">00:00</string>
+    <string name="international_time">International Time</string>
+    <string name="local_time">Local Time</string>
+    <string name="world_clock">World Clock</string>
+    <string name="cancel_alarm">Cancel Alarm</string>
+    <string name="set_alarm">Set Alarm</string>
+    <string name="select_time">Select Time</string>
+    <string name="sample_alarm_time">08 : 45 PM</string>
+    <string name="global">Global</string>
 </resources>

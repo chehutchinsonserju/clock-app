@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".StopwatchActivity">
 
     <TextView
@@ -14,19 +15,20 @@
         android:layout_height="wrap_content"
         android:text="@string/time_at_zero"
         android:padding="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="60sp"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginBottom="250sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="119dp"
-        app:layout_constraintTop_toBottomOf="@+id/timeTV">
+        app:layout_constraintTop_toBottomOf="@+id/timeTV"
+        tools:layout_editor_absoluteX="15dp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStartStop"
@@ -54,58 +56,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="413dp"
-        android:layout_height="176dp"
-        app:flow_horizontalBias="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/stopwatchbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_bigger_margin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/timerbtn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/stopwatch"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-            android:contentDescription="@string/stopwatchDescription" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/timerbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_margin="@dimen/fab_bigger_margin"
-            android:contentDescription="@string/timerDescription"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.508"
-            app:srcCompat="@drawable/ic_timer"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/alarmbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|start"
-            android:layout_margin="@dimen/fab_bigger_margin"
-            android:layout_marginStart="72dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/timerbtn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/alarm"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-            android:contentDescription="@string/alarmDescription" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

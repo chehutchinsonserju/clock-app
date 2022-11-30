@@ -3,62 +3,75 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_chronos"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_chronos_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LastAttempt"
         tools:targetApi="31">
         <activity
+            android:name=".GlobalActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LastAttempt.NoActionBar" />
+
+        <activity
             android:name=".Splash"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StopwatchActivity"
-            android:theme="@style/Theme.LastAttempt.NoActionBar"
-            android:exported="true">
-        </activity>
-        <service android:name=".Utilities.Stopwatch"/>
 
-
-        <activity android:name=".TimerActivity"
-            android:theme="@style/Theme.LastAttempt.NoActionBar"
+        <activity
+            android:name=".HomeActivity"
             android:exported="true"
-            tools:ignore="WrongManifestParent">
-        </activity>
+            android:theme="@style/Theme.LastAttempt.NoActionBar" />
 
-        <receiver android:name=".Utilities.TimerExpiredReceiver"
+        <activity
+            android:name=".StopwatchActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LastAttempt.NoActionBar" />
+
+        <service android:name=".Utilities.Stopwatch" />
+
+        <activity
+            android:name=".TimerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LastAttempt.NoActionBar"
+            tools:ignore="WrongManifestParent" />
+
+        <receiver
+            android:name=".Utilities.TimerExpiredReceiver"
             android:enabled="true"
             android:exported="false"
-            tools:ignore="WrongManifestParent"/>
+            tools:ignore="WrongManifestParent" />
         <receiver
             android:name=".Utilities.TimerNotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="stop"/>
+                <action android:name="stop" />
                 <action android:name="pause" />
                 <action android:name="resume" />
                 <action android:name="start" />
             </intent-filter>
         </receiver>
 
-
         <activity android:name=".Utilities.DestinationActivity" />
-        <activity android:name=".AlarmActivity"
-            android:theme="@style/Theme.LastAttempt.NoActionBar"
-            android:exported="true">
-        </activity>
-        <receiver android:name=".Utilities.AlarmReceiver"/>
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LastAttempt.NoActionBar" />
+
+        <receiver android:name=".Utilities.AlarmReceiver" />
     </application>
 
 </manifest>

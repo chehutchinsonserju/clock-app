@@ -30,7 +30,6 @@ class StopwatchActivity : AppCompatActivity()
         serviceIntent = Intent(applicationContext, Stopwatch::class.java)
         registerReceiver(updateTime, IntentFilter(Stopwatch.TIMER_UPDATED))
 
-        configureLinks()
     }
 
     private fun startStopTimer()
@@ -84,36 +83,4 @@ class StopwatchActivity : AppCompatActivity()
     }
     private fun makeTimeString(hour: Int, min: Int, sec: Int): String = String.format("%02d:%02d:%02d", hour, min, sec)
 
-    private fun configureLinks() {
-        val stopwatch = findViewById<FloatingActionButton>(R.id.stopwatchbtn)
-        stopwatch.setOnClickListener {
-            switchActivity("Stopwatch")
-        }
-        val timer = findViewById<FloatingActionButton>(R.id.timerbtn)
-        timer.setOnClickListener{
-            switchActivity("Timer")
-        }
-        val alarm = findViewById<FloatingActionButton>(R.id.alarmbtn)
-        alarm.setOnClickListener{
-            switchActivity("Alarm")
-        }
-}
-
-    private fun switchActivity(viewName: String) {
-
-        when (viewName){
-            "Stopwatch"->{
-                val intent = Intent(this, StopwatchActivity::class.java)
-                startActivity(intent)
-            }
-            "Timer" ->{
-                val intent = Intent(this, TimerActivity::class.java)
-                startActivity(intent)
-            }
-            "Alarm"->{
-                val intent = Intent(this, AlarmActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
 }
