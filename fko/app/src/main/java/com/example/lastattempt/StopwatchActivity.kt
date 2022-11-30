@@ -6,9 +6,9 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.example.lastattempt.Utilities.Stopwatch
 import com.example.lastattempt.databinding.ActivityStopwatchBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlin.math.roundToInt
 
 class StopwatchActivity : AppCompatActivity()
@@ -85,25 +85,33 @@ class StopwatchActivity : AppCompatActivity()
     private fun makeTimeString(hour: Int, min: Int, sec: Int): String = String.format("%02d:%02d:%02d", hour, min, sec)
 
     private fun configureLinks() {
-        val clock = findViewById<Button>(R.id.clockbtn)
-        clock.setOnClickListener {
+        val stopwatch = findViewById<FloatingActionButton>(R.id.stopwatchbtn)
+        stopwatch.setOnClickListener {
+            switchActivity("Stopwatch")
+        }
+        val timer = findViewById<FloatingActionButton>(R.id.timerbtn)
+        timer.setOnClickListener{
             switchActivity("Timer")
         }
-        val stopwatch = findViewById<Button>(R.id.stopwatchbtn)
-        stopwatch.setOnClickListener{
-            switchActivity("Stopwatch")
+        val alarm = findViewById<FloatingActionButton>(R.id.alarmbtn)
+        alarm.setOnClickListener{
+            switchActivity("Alarm")
         }
 }
 
     private fun switchActivity(viewName: String) {
 
         when (viewName){
+            "Stopwatch"->{
+                val intent = Intent(this, StopwatchActivity::class.java)
+                startActivity(intent)
+            }
             "Timer" ->{
                 val intent = Intent(this, TimerActivity::class.java)
                 startActivity(intent)
             }
-            "Stopwatch"->{
-                val intent = Intent(this, Stopwatch::class.java)
+            "Alarm"->{
+                val intent = Intent(this, AlarmActivity::class.java)
                 startActivity(intent)
             }
         }

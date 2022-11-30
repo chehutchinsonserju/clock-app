@@ -63,31 +63,48 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/clockbtn"
-            android:layout_width="132dp"
-            android:layout_height="60dp"
-            android:layout_margin="15sp"
-            android:layout_marginStart="4dp"
-            android:text="@string/clock"
-            android:textSize="24sp"
-            app:backgroundTint="#FF5722"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/stopwatchbtn"
-            android:layout_width="196dp"
-            android:layout_height="65dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:text="@string/stopwatch"
-            android:textSize="24sp"
-            app:backgroundTint="#FF5722"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_bigger_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/timerbtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/stopwatch"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+            android:contentDescription="@string/stopwatchDescription" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timerbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/fab_bigger_margin"
+            android:contentDescription="@string/timerDescription"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/clockbtn" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.508"
+            app:srcCompat="@drawable/ic_timer"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/alarmbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="@dimen/fab_bigger_margin"
+            android:layout_marginStart="72dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/timerbtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/alarm"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+            android:contentDescription="@string/alarmDescription" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

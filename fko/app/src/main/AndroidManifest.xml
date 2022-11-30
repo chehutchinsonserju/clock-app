@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,29 +14,28 @@
         android:theme="@style/Theme.LastAttempt"
         tools:targetApi="31">
         <activity
-            android:name=".StopwatchActivity"
+            android:name=".Splash"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+        </activity>
+        <activity android:name=".StopwatchActivity"
+            android:theme="@style/Theme.LastAttempt.NoActionBar"
+            android:exported="true">
         </activity>
         <service android:name=".Utilities.Stopwatch"/>
-        <activity
-            android:name=".TimerActivity"
+
+
+        <activity android:name=".TimerActivity"
             android:theme="@style/Theme.LastAttempt.NoActionBar"
             android:exported="true"
             tools:ignore="WrongManifestParent">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
         <receiver android:name=".Utilities.TimerExpiredReceiver"
             android:enabled="true"
             android:exported="false"
@@ -51,6 +51,14 @@
                 <action android:name="start" />
             </intent-filter>
         </receiver>
+
+
+        <activity android:name=".Utilities.DestinationActivity" />
+        <activity android:name=".AlarmActivity"
+            android:theme="@style/Theme.LastAttempt.NoActionBar"
+            android:exported="true">
+        </activity>
+        <receiver android:name=".Utilities.AlarmReceiver"/>
     </application>
 
 </manifest>
